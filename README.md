@@ -4,7 +4,7 @@ Used a two-variable system to study the voltage flux across cardiac cell membran
 ## Motivation
 Cardiac Arrhythmia, or irregular heart beat, is a name for a large family of cardiac behaviors that show abnormalities in the electrical behavior of the hard. A heartbeat that is too fast (“tachycardia”) or too slow (“bradycardia”) can be fatally dangerous. Other examples of arrhythmias include heart palpitations, stroke, and embolism. The natural pacemaker of the heart is called the sinoatrial node. Pacemaker cells are polarized. When the cells generate an electrical impulse (a cardiac action potential), voltage gated channels open to allow charge to move through the cell, creating heartbeats. These cardiac dynamics can be modeled with the help of a system of nonlinear ordinary differential equations. With the help of MATLAB, required graphs are generated to visualize the problem.
 
-## The Basic Model
+## Initial Equations
 We use a two-variable system to study the voltage flux across cardiac cell membranes, which can give insight to how and why arrhythmias form:
 
 <img src="/eq1.png" alt="Eq1" height="200"/>
@@ -17,4 +17,39 @@ a represents the threshold excitation in the system. <br>
 k controls the magnitude of the electric current across the cell membrane. <br>
 vh describes the repolarization current in the recovery process. <br>
 
-## 
+## The Basic Model
+First, we assume that S(t) = 0, now the equation becomes: <br>
+<img src="/eq2.png" alt="Eq2" height="130"/>
+
+<img src="/basic_model_v_nullclines.png" alt="v nullclines" width="450"/>
+<img src="/basic_model_h_nullclines.png" alt="h nullclines" width="450"/>
+
+There is only one non-negative equilibrium solution (v0,h0). The only non-negative equilibrium point occurs when v0= 0 and h0=0, at the point (0, 0). We will now define the following equations: <br>
+v′ = f(v, h) <br>
+h′ = g(v, h) <br>
+
+We then calculate the eigenvalues and see that both of them are negative. This implies that the point (0,0) is asymptotically stable. If the solution starts close enough to an asymptotically stable equilibrium point, then the solution will converge to that equilibrium point as t→∞. 
+
+Biologically, this means that the voltage across the cell membrane has a tendency to go towards zero, and the gating variable also approaches zero, in which voltage will
+able to pass freely through the gate. <br>
+
+Upon putting in the values of the various constants, the final equations we get are: <br>
+<img src="/basic_model_final_eq.png" alt="final eq" width="450"/>
+
+The graph of the nullclines for these equations is as follows: <br>
+<img src="/figure1.png" alt="Figure1" height="350"/>
+
+A sample solution curve in the vector field is plotted with the starting point (v0,h0)=(0.5,0.2): <br>
+<img src="/sample_curve_basic_model.png" alt="Sample Curve" height="360"/>
+
+A sample solution curve in the vector field, with the starting point (v0,h0)=(0.1,0.2): <br>
+<img src="/sample_curve2_basic_model.png" alt="Sample Curve2" height="360"/>
+
+1. The solution curve with starting position (0.5, 0.2) initially moves in the positive v direction, before rotating counter-clockwise and eventually reaching the equilibrium
+point (0,0).
+2. On the other hand, the solution curve with starting position (0.1, 0.2) initially moves in the negative v direction, and reaches the equilibrium point (0,0) much more quickly. Given the nullclines and the vector field, these solutions makes sense.
+3. The trajectories of the solution curves follow the directions of the vectors on the vector field.
+4. When the initial value v is to the right of a, the trajectory initially moves in the positive v direction, before rotating counter-clockwise to approach the equilibrium
+point.
+5. On the other hand, when the initial value v is to the left of a, the trajectory moves in the negative v direction and directly approaches the equilibrium point.
+6. As the initial value v gets closer to zero, the trajectory approaches the equilibrium point quicker.
