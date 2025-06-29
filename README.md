@@ -62,6 +62,11 @@ point.
 
 Sample solution curve with initial point (0,0): <br>
 <img src="/improved_model_sample_curve.png" alt="Sample Curve" height="360"/>
+1.  The solution starts at (v0, h0)=(0,0) and a positive stimulus S=0.25 of voltage is added.
+2.   The flow is counter-clockwise. If no more stimuli are given after the initial push, then as t → ∞ the system will approach the equilibrium solution (0,0).
 
 Sample solution curve with initial point (0.25,0): <br>
 <img src="/improved_model_sample_curve2.png" alt="Sample Curve" height="360"/>
+1. It basically starts at (0.25,0) and goes to max v of 1, then it rotates counterclockwise approaching the equilibrium point (0,0).
+2. The solutions to dv/dt and dh/dt are simulated starting from the initial condition (v0,h0)=(β,0) in which β = 0.25 over the time interval t ∈ [0, 500] with a time-step of Δt=0.2.
+
