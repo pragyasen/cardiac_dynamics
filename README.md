@@ -53,3 +53,15 @@ point (0,0).
 point.
 5. On the other hand, when the initial value v is to the left of a, the trajectory moves in the negative v direction and directly approaches the equilibrium point.
 6. As the initial value v gets closer to zero, the trajectory approaches the equilibrium point quicker.
+
+## Model Improvement: Periodic Stimulation
+1.  For maintaining a steady heartbeat, periodic stimulation of cardiac cells is required.
+2.  The period of stimulation is denoted by the parameter T, which defines the number of time units that pass between each stimulation.
+3.  The cell will not be stimulated for any time between stimulation times.
+4.  The system is initially assumed to be at (v0,h0)=(0,0) and a large positive stimulus is added to the voltage.
+
+Sample solution curve with initial point (0,0): <br>
+<img src="/improved_model_sample_curve.png" alt="Sample Curve" height="360"/>
+
+Sample solution curve with initial point (0.25,0): <br>
+<img src="/improved_model_sample_curve2.png" alt="Sample Curve" height="360"/>
