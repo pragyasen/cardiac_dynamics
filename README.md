@@ -66,7 +66,20 @@ Sample solution curve with initial point (0,0): <br>
 2.   The flow is counter-clockwise. If no more stimuli are given after the initial push, then as t → ∞ the system will approach the equilibrium solution (0,0).
 
 Sample solution curve with initial point (0.25,0): <br>
-<img src="/improved_model_sample_curve2.png" alt="Sample Curve" height="360"/>
+<img src="/improved_model_sample_curve2.png" alt="Sample Curve2" height="360"/>
 1. It basically starts at (0.25,0) and goes to max v of 1, then it rotates counterclockwise approaching the equilibrium point (0,0).
 2. The solutions to dv/dt and dh/dt are simulated starting from the initial condition (v0,h0)=(β,0) in which β = 0.25 over the time interval t ∈ [0, 500] with a time-step of Δt=0.2.
 
+Sample solution curve with initial point (0,0) with a stimulation period T=100 and a stimulus of S(t)=0: <br>
+<img src="/improved_model_sample_curve3.png" alt="Sample Curve3" height="360"/>
+1. The solutions to dv/dt and dh/dt are simulated starting from the initial condition (v0,h0) = (0,0) over the time interval t ∈ [0, 500] with a time-step of Δt = 0.2 with a stimulation period T = 100 and a stimulus of S(t) = 0.25.
+2. In the system without constant stimulus, v and h both approach zero. In the system with constant stimulus, v and h approach the equilibrium point zero, but then proceed to increase in magnitude periodically.
+
+## Cardiac Action Potential
+The APD (Action Potential Duration) is the duration from the time a cell is stimulated to the time it repolarizes. The APD is calculated as follows:
+<img src="/apd_formula.png" alt="APD formula" height="30"/>
+1. In which tup is the time at which the voltage v passes a constant critical voltage vc on the way up, and tdown is the time at which the voltage v passes that same constant critical voltage vc on the way down.
+2. We let the critical voltage be vc = 0.1.
+3. The APD for the last full beat of the v(t) solution curve corresponds to the steady state APD, and is denoted APD0.
+4. We proceed to use the initial condition (v0,h0) = (0,0) over the time interval ∈ [0,1000] with a time-step of Δt = 0.2 and stimulus S(t) = 0.25 to stimulate solutions to
+dv/dt and dh/dt to find the APD0 for T1= 100, T2=90, T3=80, T4=70, T5=60 and T6=50.
