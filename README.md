@@ -83,3 +83,23 @@ The APD (Action Potential Duration) is the duration from the time a cell is stim
 3. The APD for the last full beat of the v(t) solution curve corresponds to the steady state APD, and is denoted APD0.
 4. We proceed to use the initial condition (v0,h0) = (0,0) over the time interval ∈ [0,1000] with a time-step of Δt = 0.2 and stimulus S(t) = 0.25 to stimulate solutions to
 dv/dt and dh/dt to find the APD0 for T1= 100, T2=90, T3=80, T4=70, T5=60 and T6=50.
+
+The following is a table of the data points that we have gathered: <br>
+<img src="/t_apd_table.png" alt="APD formula" height="260"/>
+<img src="/t_apd_graph.png" alt="APD formula" height="260"/> <br>
+It is seen that APD0 increases as T increases. From a biological viewpoint, as the heart cell is 0 stimulated more frequently, the time period between consecutive beats decreases.
+
+T vs h: <br>
+<img src="/t_h_table.png" alt="APD formula" height="260"/>
+<img src="/t_h_graph.png" alt="APD formula" height="260"/> <br>
+1. An important feature of cardiac tissue is that theAPD needs to be long enough, especially for large animals.
+2. The heartbeats of large animals are longer, because they have larger hearts, and so the voltage gated channels in their hearts need more time to allow charge to move through the cell to create heartbeats.
+3. It is seen that the steady-state h decreases as T increases. From a biological point of view, if the heart cell is stimulated less frequently, it will return closer to a resting state, thus will be closer to zero.
+
+APD vs h: <br>
+<img src="/apd_h_graph.png" alt="APD formula" height="260"/> <br>
+As can be seen, the steady-state h decreases as APD increases. This is because there will be a longer resting period between consecutive heartbeats if a heartbeat takes a longer amount of time, which means that the steady-state h will decrease (since it has more time to reach a resting state).
+
+## Conclusion
+1. If a heartbeat takes longer, the heart cell also needs to relax more. This helps explain why a heartbeat that is too fast (“tachycardia”) or too slow (“bradycardia”) can be fatally dangerous.
+2. If a heartbeat is too fast, the heart cell may not have enough time to relax. On the other hand, if a heartbeat is too slow, the heart cell may relax too much, since it will tend towards the equilibrium resting state, so it may not be able to recover quickly enough.
